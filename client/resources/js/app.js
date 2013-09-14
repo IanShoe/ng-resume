@@ -4,6 +4,7 @@ var modules =  ['ngAnimate',
                 'ngRoute',
                 'ngResume.services',
                 'ngResume.directives',
+                'formGeneratorModule',
                 'MessageCenter',
                 'DragModule'];
 
@@ -27,6 +28,10 @@ ngResume.config(['$routeProvider', '$locationProvider', '$compileProvider', func
     when('/resume', {
         templateUrl: '/views/resume.html',
         controller: resumeCtrl
+    }).
+    when('/resume-builder', {
+        templateUrl: '/views/resume-builder.html',
+        controller: resumeBuilderCtrl
     }).
     otherwise({
       redirectTo: '/home'
