@@ -10,9 +10,7 @@ app.configure(function(){
 	app.use(express.cookieParser('resumeSauce'));
 	app.use(express.session());
 	app.use(app.router);
-	app.use('/\/bower_components|resources|views|modules\/?.*/', express.static(clientDir));
 });
-console.log(__dirname);
 
 app.get(/\/bower_components|resources|views|modules\/?.*/, function(req, res){
 	res.sendfile(clientDir + req.path);
