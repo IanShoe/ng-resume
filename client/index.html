@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="modules/message-center/message-center.css">
 	<link rel="stylesheet" type="text/css" href="modules/drag-module/drag-module.css">
 </head>
-<body ng-controller="indexCtrl" class="ng-cloak container">
+<body ng-controller="indexCtrl" class="ng-cloak">
 	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navlinks">
@@ -37,7 +37,9 @@
 			</ul>
 		</div>
 	</nav>
-	<ng-view class="slide-up"></ng-view>
+	<div class="container view-container">
+		<div ng-view class="slide-up"></div>
+	</div>
 	<message-center></message-center>
 
 	<!-- Libs -->
