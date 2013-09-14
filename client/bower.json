@@ -1,0 +1,30 @@
+{
+  "name": "ng-resume",
+  "version": "0.0.0",
+  "homepage": "https://github.com/IanShoe/ng-resume",
+  "authors": [
+    "Ian Shoemaker <iss90@gmail.com>",
+    "Derek Hall <dsh8837@gmail.com>"
+  ],
+  "description": "AngularJS app to build resumes.",
+  "keywords": [
+    "angularjs",
+    "resume"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.2.0-rc.2",
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.0",
+    "angular-animate": "~1.2.0-rc.2",
+    "angular-route": "1.2.0-rc.2",
+    "angular-ui-router": "~0.2.0"
+  }
+}
