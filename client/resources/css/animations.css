@@ -9,7 +9,6 @@
 	-ms-transition: all .75s ease-in-out;
 	-o-transition: all .75s ease-in-out;
 	transition: all .75s ease-in-out;
-	position: absolute;
 }
 
 .slide-up.ng-enter {
@@ -32,7 +31,7 @@
 	opacity: 0;
 }
 
-/*.ng-fade.ng-enter, .ng-fade.ng-leave {
+.ng-fade.ng-enter, .ng-fade.ng-leave {
 	position:absolute;
 }
 
@@ -146,4 +145,4 @@
 @-o-keyframes rotate-leave {
 	0% {-o-transform: rotate(360deg);opacity:1;}
 	100% {-o-transform: rotate(450deg);opacity:0;}
-}*/
+}

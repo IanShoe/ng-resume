@@ -2,6 +2,9 @@ body {
     font-family: Times;
     font-size: 16px;
     padding-top: 70px;
+    background-image: url('../images/BG-Light-Yellow.jpg');
+    background-size: 15%;
+    color: #313333;
 }
 
 hr.flair-divider {
@@ -32,16 +35,15 @@ hr.flair-divider:before {
 
 .view-container{
     position: relative;
-    top: 0;
 }
 
 /*Resume*/
 .main-content {
-    
+
 }
 
 .side-content {
-    
+
 }
 
 .header {
@@ -78,10 +80,10 @@ hr.flair-divider:before {
 
 .xp-bar, .xp-bar * {
     -webkit-transition: all .75s ease-in-out;
-       -moz-transition: all .75s ease-in-out;
-        -ms-transition: all .75s ease-in-out;
-         -o-transition: all .75s ease-in-out;
-            transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    -ms-transition: all .75s ease-in-out;
+    -o-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
 }
 
 .xp-bar {
@@ -137,4 +139,16 @@ hr.flair-divider:before {
 
 .xp-bar-stars i {
     margin-right: 1px;
+}
+
+/*Resume Builder*/
+
+.builder-header {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.nav-tabs > li{
+    cursor: pointer;
 }

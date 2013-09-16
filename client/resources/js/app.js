@@ -5,6 +5,7 @@ var modules =  ['ngAnimate',
                 'ngResume.services',
                 'ngResume.directives',
                 'formGeneratorModule',
+                'ui.bootstrap',
                 'MessageCenter',
                 'DragModule'];
 

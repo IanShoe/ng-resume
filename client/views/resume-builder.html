@@ -1,7 +1,76 @@
-<div>
-	<form-generator form-fields="generalResumeFields"></form-generator>
-	<!-- <select ng-model="currentJob" ng-options="job in resume.jobs"></select>
-	<form-generator form-fields="currentJob"></form-generator> -->
+<div class="row">
+	<div class="col-md-8">
+		<tabset>
+			<tab heading="General">
+				<h4 class="builder-header">General Information</h4>
+				<form-generator form-fields="generalResumeFields"></form-generator>
+			</tab>
+			<tab heading="Jobs">
+				<span ng-controller="jobsCtrl">
+					<h4 class="builder-header">Jobs</h4>
+					<button class="btn btn-primary" ng-click="newJob()"><i class="icon-plus"></i> New Job</button>
+					<div class="job-container" ng-repeat="job in resume.jobs">
+						<div>
+							<button class="btn btn-danger" ng-click="removeJob(job)"><i class="icon-trash"></i> Delete</button>
+						</div>
+						<label>Company Name</label>
+						<input type="text" ng-model="job.company" placeholder="Enter Company Name">
+						<label>Start Date</label>
+						<input type="date" ng-model="job.start" placeholder="Enter Start Date">
+						<label>End Date</label>
+						<input type="date" ng-model="job.end" placeholder="Enter End Date">
+						<label>Title</label>
+						<input type="text" ng-model="job.title" placeholder="Enter Your Job Title">
+						<div>
+							<h4 class="builder-header">Details</h4>
+							<button class="btn btn-primary" ng-click="newDetail(job)"><i class="icon-plus"></i> New Detail</button>
+							<div class="job-container" ng-repeat="detail in job.details">
+								<div>
+									<button class="btn btn-danger" ng-click="removeDetail(job, detail)"><i class="icon-trash"></i> Delete</button>
+								</div>
+								<textarea ng-model="detail.description"></textarea>
+							</div>
+						</div>
+					</div>
+				</span>
+			</tab>
+			<tab heading="Education">
+				<span ng-controller="collegeCtrl">
+					<h4 class="builder-header">College</h4>
+					<button class="btn btn-primary" ng-click="newCollege()"><i class="icon-plus"></i> New College</button>
+					<div class="college-container" ng-repeat="college in resume.education.colleges">
+						<div>
+							<button class="btn btn-danger" ng-click="removeCollege(college)"><i class="icon-trash"></i> Delete</button>
+						</div>
+						<label>College Name</label>
+						<input type="text" ng-model="college.name" placeholder="Enter College Name">
+						<label>Graduation Date</label>
+						<input type="date" ng-model="college.graduation" placeholder="Enter Graduation Date">
+						<label>Degree</label>
+						<select ng-model="college.degree">
+							<option value="Associate of Art">AA</option>
+							<option value="Associate of Science">AS</option>
+							<option value="Bachelor of Art">BA</option>
+							<option value="Bachelor of Science">BS</option>
+							<option value="Master of Art">MA</option>
+							<option value="Master of Science">MS</option>
+						</select>
+						<div>
+							<h4 class="builder-header">Courses</h4>
+							<button class="btn btn-primary" ng-click="newCourse(college)"><i class="icon-plus"></i> New Course</button>
+							<div class="college-container" ng-repeat="course in college.courses">
+								<div>
+									<button class="btn btn-danger" ng-click="removeCourse(college, course)"><i class="icon-trash"></i> Delete</button>
+								</div>
+								<input type="text" ng-model="course.name">
+							</div>
+						</div>
+					</div>
+				</span>
+			</tab>
+		</tabset>
+	</div>
+	<div class="col-md-4">
+		<pre>{{resume | json}}</pre>
+	</div>
 </div>
-
-<pre style="margin-top:200px;">{{resume | json}}</pre>
